@@ -1,4 +1,4 @@
-package com.spengergasse.firstapp.presentation;
+package com.spengergasse.firstapp.presentation.web;
 
 import java.text.ParseException;
 import java.util.Locale;
