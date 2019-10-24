@@ -21,10 +21,17 @@ import javax.annotation.PostConstruct;
 public class StudentService {
     private final StudentRepository studentRepository;
 
+    /**
+     * Liefert eine Liste aller Students.
+     * @return
+     */
     public List<Student> getAllStudents() {
         return studentRepository.findAll();
     }
 
+    /**
+     * Schreibt 2 Students zum Testen in das Repository.
+     */
     @PostConstruct
     @Transactional(readOnly = true)
     public void initialize() {
