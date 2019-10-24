@@ -8,8 +8,12 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
 /**
- * Controller für Webrequests, die eine gerenderte HTML View brauchen.
+ * Definiert ein Advice. Das bedeutet, dass bestimmte Situationen in den
+ * Controllern überwacht werden. Wir benutzen das Überwachen von Exceptions, auf
+ * die wir mit einer benutzerdefinierten Antwort reagieren.
  */
+// Berücksichtigt nur Controller, die im aktuellen Paket oder darunter liegen. ALso nicht die api
+// controller.
 @ControllerAdvice(basePackageClasses = { GlobalWebControllerAdvice.class})
 public class GlobalWebControllerAdvice {
     // Stellt in Thymeleaf ein Attribut renderTS bereit, das in der folgenden Methode berechnet wird.

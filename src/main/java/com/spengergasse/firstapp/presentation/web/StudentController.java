@@ -25,6 +25,7 @@ public class StudentController {
     public String showStudents(Model model) {
         List<Student> students = studentService.getAllStudents();
         // Für Thymeleaf schreiben wir in das Property students unser Abfrageergebnis.
+        // detail.html ist noch nicht vorhanden.
         model.addAttribute("students", students);
         return (students.size() == 1) ? "students/detail" : "students/list";
     }
