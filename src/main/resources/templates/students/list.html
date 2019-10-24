@@ -21,6 +21,8 @@
                 <th>Registration</th>
                 <th>Gender</th>
             </tr>
+            <!-- Thymeleaf Syntax für die Tabellenerzeugung. Student wird mit model.addAttribute("students", students);
+            in StudentController eingefügt. -->
             <tr th:each="student:${students}">
                 <td th:text="${student.firstname}">firstname</td>
                 <td th:text="${student.lastname}">lastname</td>

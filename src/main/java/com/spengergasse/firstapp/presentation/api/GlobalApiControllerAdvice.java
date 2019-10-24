@@ -10,20 +10,23 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import lombok.Builder;
 import lombok.Data;
 
-@ControllerAdvice(basePackageClasses = { GlobalApiControllerAdvice.class})
+/**
+ * Definiert ein Advice. Das bedeutet, dass bestimmte Situationen in den
+ * Controllern überwacht werden. Wir benutzen das Überwachen von Exceptions, auf
+ * die wir mit einer benutzerdefinierten Antwort reagieren.
+ */
+@ControllerAdvice(basePackageClasses = { GlobalApiControllerAdvice.class })
 public class GlobalApiControllerAdvice {
-    /**
-     * Liefert im Falle einer auftretenden Exception eine in JSON serialisierte
-     * Instanz von ApiError.
-     * @param t
-     * @return
-     */
+    // Liefert im Falle einer auftretenden Exception eine in JSON serialisierte
+    // Instanz von ApiError.
     @ExceptionHandler(Throwable.class)
     public HttpEntity<ApiError> handleThrowable(Throwable t) {
         ApiError body = ApiError.builder().errorCode(-1000).message(t.getMessage()).build();
+        // Liefert 400 Bad Request mit den in ApiError enthaltenen Daten.
         return ResponseEntity.badRequest().body(body);
 
     }
+
     @Data
     @Builder
     private static class ApiError {

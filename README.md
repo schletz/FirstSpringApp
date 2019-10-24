@@ -1,5 +1,10 @@
 # Erste Spring Boot Applikation in VS Code
 
+## Features
+Diese Webapplikation in Spring Boot stellt 2 URLs bereit:
+- http://localhost:8080/ (liefert alle Studenten als gerenderte HTML View mit Thymeleaf)
+- http://localhost:8080/api/students (liefert als RESTful API ein JSON mit allen Studenten)
+
 ## Pakete in VS Code
 - Java SE Development Kit von [oracle.com](https://www.oracle.com/technetwork/java/javase/downloads/jdk13-downloads-5672538.html) herunterladen und 
   in den Ordner *C:/jdk-11.0.3* (als Beispiel) installieren. Die Umgebungsvariable *JAVA_HOME* muss 
@@ -10,7 +15,8 @@
 - In VS Code die Extension *Lombok Annotations Support for VS Code* installieren.
 
 ## Anlegen des Projektes
-Auf https://start.spring.io kann nun ein Maven Project mit Java und der Version 2.2.0 von Spring Boot
+In diesem Ordner ist ein vollständig lauffähiges Projekt enthalten. Um ein leeres Projekt zu erzeugen,
+kann auf https://start.spring.io ein Maven Project mit Java und der Version 2.2.0 von Spring Boot
 generiert werden. Als Gruppe wird *com.spengergasse*, als Articact *firstapp* eingegeben. In den 
 Optionen können auch gleich Dependencies für Maven eingetragen werden. Für das Projekt werden 
 folgende Abhängigkeiten eingefügt:
@@ -51,3 +57,4 @@ Alternativ kann auch mit dem Befahl `./mvnw spring-boot:run` im firstapp Verzeic
 die Applikation gestartet werden. 
 Mit `./mvnw clean package` im firstapp Verzeichnis die Pakete frisch aus dem Netz geladen werden. 
 Mit `./mvnw dependency:go-offline` können die Pakete für den Offlinemodus geladen werden.
+

@@ -16,22 +16,21 @@ import javax.annotation.PostConstruct;
 
 @RequiredArgsConstructor
 
+/**
+ * Servicelayer für unsere Student Applikation. Dieser Service wird in den Controllern instanziert
+ * und er stellt die Daten für die Anzeige bereit.
+ */
 @Service
 @Transactional(readOnly = true)
 public class StudentService {
     private final StudentRepository studentRepository;
 
-    /**
-     * Liefert eine Liste aller Students.
-     * @return
-     */
+    // Liefert eine Liste aller Studenten in der Datenbank.
     public List<Student> getAllStudents() {
         return studentRepository.findAll();
     }
 
-    /**
-     * Schreibt 2 Students zum Testen in das Repository.
-     */
+    // Wird beim Instanzieren automatisch ausgeführt und generiert in diesem Fall Musterdaten.
     @PostConstruct
     @Transactional(readOnly = true)
     public void initialize() {

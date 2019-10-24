@@ -112,3 +112,9 @@ drop table students if exists
 drop table teachers if exists
 drop table teachers_courses if exists
 drop sequence if exists hibernate_sequence
+drop table courses if exists
+drop table courses_students if exists
+drop table students if exists
+drop table teachers if exists
+drop table teachers_courses if exists
+drop sequence if exists hibernate_sequence

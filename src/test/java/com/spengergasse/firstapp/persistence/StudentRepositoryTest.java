@@ -5,6 +5,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import com.spengergasse.firstapp.domain.Gender;
 import com.spengergasse.firstapp.domain.Student;
 
 import org.junit.jupiter.api.AfterAll;
@@ -31,7 +32,11 @@ class StudentApplicationTest {
     @Test
     void ensureSaveAndReloadOfStudentWorksProperty() {
         // given / arrange
-        Student student = Student.builder().firstname("Michael").lastname("Schletz").registrationTS(LocalDateTime.now()).build();
+        Student student = Student.builder()
+        .firstname("Michael")
+        .lastname("Schletz")
+        .registrationTS(LocalDateTime.now())
+        .build();
 
         // when / set
         Student savedStudent = studentRepository.save(student);
@@ -45,11 +50,12 @@ class StudentApplicationTest {
         Student student = Student.builder()
             .firstname("Michael")
             .lastname("Schletz")
-            .registrationTS(LocalDateTime.of(2019, 10, 1, 0, 0))
+            .gender(Gender.MALE)
+            .registrationTS(LocalDateTime.of(2019, 1, 1, 0, 0))
             .build();
         studentRepository.save(student);
 
-        List<Student> result = studentRepository.findRegisteredBefore(LocalDateTime.of(2020, 1, 1, 0, 0));
+        List<Student> result = studentRepository.findRegisteredBefore(LocalDateTime.of(2019, 2, 1, 0, 0));
         assertTrue(result.size() == 1);
     }
     @AfterEach

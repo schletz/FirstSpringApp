@@ -7,21 +7,27 @@ import java.util.stream.Collectors;
 
 import lombok.RequiredArgsConstructor;
 
-// Die Kürzel werden in der Datenbank gespeichert.
+/**
+ * Enumeration für Gender.
+ */
 @RequiredArgsConstructor
 public enum Gender {
     FEMALE("F"), MALE("M"), LEGAL("L"), TRANSSEXUAL("T");
 
     private final String code;
 
+    // Zur Demonstration, wird nicht verwendet.
     public boolean isFemale() {
         return this == FEMALE;
     }
 
+    // Zur Demonstration, wird nicht verwendet.
     public Predicate<Gender> isFemalePredicate() {
         return x -> x == FEMALE;
     }
 
+    // Liefert den enum Wert (F, M, ..) zum übergebenen Code. Wird in GenderConverter.java
+    // verwendet.
     public static Gender forCode(String code) {
         Objects.requireNonNull(code, "code must not be null");
 
@@ -35,6 +41,7 @@ public enum Gender {
 
 	}
 
+    // Liefert eine mit, getrennte Liste aller Codes.
     private static String getCodes() {
         return Arrays
             .stream(values())
@@ -42,6 +49,7 @@ public enum Gender {
             .collect(Collectors.joining(", "));
     }
 
+    // Liefert den Buchstabencode (F, M, ...)
     public String getCode()  {
         return code;
     }
