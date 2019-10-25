@@ -1,8 +1,6 @@
 = Beispiele mit AsciiDoc
 
-ifdef::env-github[] <1> (1)
-:imagesdir: https://gist.githubusercontent.com/path/to/gist/revision/dir/with/all/images
-endif::[]
+
 
 ifdef::env-github[]
 :tip-caption: :bulb:
@@ -21,6 +19,9 @@ TIP: Weitere Informationen auf https://gist.github.com/dcode/0cfbf2699a1fe9b46ff
 
 === Syntax Highlighting
 [source,c#,linenums,highlight=2..5,indent=0]
+ifdef::env-github[] <1> (1)
+:imagesdir: https://github.com/schletz/FirstSpringApp/raw/master/Asciidoc
+endif::[]
 ----
         static void Main(string[] args)
         {
@@ -41,4 +42,3 @@ and as necessary in the political world as storms in the physical."
 
 Das ist ein schiefes "`Anführungszeichen`" und das ''auch'' ``d`` .
 Das ist eine Bemerkung.footnote:[Vgl. http://www.url.com]
-
