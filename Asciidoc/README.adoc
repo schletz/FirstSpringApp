@@ -1,4 +1,6 @@
 = Beispiele mit AsciiDoc
+:source-highlighter: rouge
+
 
 ifdef::env-github[]
 :tip-caption: :bulb:
@@ -28,4 +30,5 @@ include::Program.cs[tags=mainMethod]
            Console.WriteLine("Hello!");
         }
 ----
+
 
