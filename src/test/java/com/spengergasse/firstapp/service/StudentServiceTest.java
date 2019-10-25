@@ -1,9 +1,6 @@
 package com.spengergasse.firstapp.service;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
-import static org.mockito.ArgumentMatchers.anyCollectionOf;
 import static org.mockito.Mockito.*;
 
 import java.time.LocalDateTime;
