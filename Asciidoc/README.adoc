@@ -1,6 +1,4 @@
 = Beispiele mit AsciiDoc
-:source-highlighter: rouge
-
 
 ifdef::env-github[]
 :tip-caption: :bulb:
@@ -17,12 +15,7 @@ TIP: Weitere Informationen auf https://gist.github.com/dcode/0cfbf2699a1fe9b46ff
      auf https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/ und im 
      https://asciidoctor.org/docs/user-manual[Asciidoctor User Manual]
 
-
-[source,c#,linenums,highlight=2..5,indent=0]
-----
-include::Program.cs[tags=mainMethod]
-----
-
+=== Syntax Highlighting
 [source,c#,linenums,highlight=2..5,indent=0]
 ----
         static void Main(string[] args)
@@ -31,4 +24,17 @@ include::Program.cs[tags=mainMethod]
         }
 ----
 
+=== Einbinden von externen Dateien mit einem Tag im Quellcode
+[source,c#,linenums,highlight=2..5,indent=0]
+----
+include::Program.cs[tags=mainMethod]
+----
+
+"I hold it that a little rebellion now and then is a good thing,
+and as necessary in the political world as storms in the physical."
+-- http://www.url.com
+
+Das ist ein "Anführungszeichen" und das ''auch''.
+
+Das ist eine Bemerkung.footnote:[Vgl. http://www.url.com]
 
