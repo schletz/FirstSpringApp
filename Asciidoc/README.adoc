@@ -18,5 +18,5 @@ TIP: Weitere Informationen auf https://gist.github.com/dcode/0cfbf2699a1fe9b46ff
 
 [source,c#,linenums,highlight=2..5,indent=0]
 ----
-include::Program.cs[tags=mainMethod]
+include::https://github.com/schletz/FirstSpringApp/blob/master/Asciidoc/Program.cs[tags=mainMethod]
 ----
