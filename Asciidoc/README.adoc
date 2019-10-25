@@ -1,0 +1,22 @@
+= Beispiele mit AsciiDoc
+
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+== Vergleich Markdown - Asciidoc
+Siehe https://asciidoctor.org/docs/user-manual/#comparison-by-example[Asciidoctor User Manual]
+
+TIP: Weitere Informationen auf https://gist.github.com/dcode/0cfbf2699a1fe9b46ff04c41721dda74[Github]
+     auf https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/ und im 
+     https://asciidoctor.org/docs/user-manual[Asciidoctor User Manual]
+
+
+[source,c#,linenums,highlight=2..5,indent=0]
+----
+include::Program.cs[tags=mainMethod]
+----
