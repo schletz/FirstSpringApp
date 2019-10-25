@@ -38,4 +38,18 @@ public class StudentService {
         Student s2 = Student.builder().firstname("Joachim").lastname("Grüneis").gender(Gender.MALE).registrationTS(LocalDateTime.now()).build();
         studentRepository.saveAll(List.of(s1, s2));
     }
+
+    public Student register(Student student) {
+        // email valide?
+        // check ob existiert
+        // wenn nicht, Passwort policy?
+
+        // generiere Token
+        // speichere Token
+        // sende Aktivierungslink oder TOken
+        // speichere Student mit Link auf Token
+
+        // Student zurückgeben
+        return null;
+    }
 }
