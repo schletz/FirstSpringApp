@@ -7,19 +7,27 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-Inline image:1.png[Logo] Image
+== Informationen
+* https://asciidoctor.org/docs/user-manual/#comparison-by-example[Markdown / Asciidoc Vergleich]
+* https://gist.github.com/dcode/0cfbf2699a1fe9b46ff04c41721dda74[GitHub Flavored Asciidoc (GFA)]
+* https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[Quick Reference]
+* https://asciidoctor.org/docs/user-manual[Asciidoctor User Manual]
 
-Blockimage
-image::1.png[Logo]
+== Beispiele
+=== Admonition
+NOTE: An admonition paragraph draws the reader's attention to auxiliary information.
+Its purpose is determined by the label at the beginning of the paragraph.
 
-== Vergleich Markdown - Asciidoc
-Siehe https://asciidoctor.org/docs/user-manual/#comparison-by-example[Asciidoctor User Manual]
+TIP: Pro tip...
 
-TIP: Weitere Informationen auf https://gist.github.com/dcode/0cfbf2699a1fe9b46ff04c41721dda74[Github]
-     auf https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/ und im 
-     https://asciidoctor.org/docs/user-manual[Asciidoctor User Manual]
+IMPORTANT: Don't forget...
+
+WARNING: Watch out for...
+
+CAUTION: Ensure that...
 
 === Syntax Highlighting
+Quelltext mit Callouts
 [source,c#,linenums,highlight=2..5,indent=0]
 ----
         static void Main(string[] args)
@@ -30,14 +38,22 @@ TIP: Weitere Informationen auf https://gist.github.com/dcode/0cfbf2699a1fe9b46ff
 <1> Gibt Hello aus.
 
 === Einbinden von externen Dateien mit einem Tag im Quellcode
+Das funktioniert auf GitHub nicht.
 [source,c#,linenums,highlight=2..5,indent=0]
----
+----
 include::Program.cs[tags=mainMethod]
----
+----
+
+=== Zitate und Anführungszeichen
+Das ist eine Bemerkung.footnote:[Vgl. http://www.url.com]
 
 "I hold it that a little rebellion now and then is a good thing,
 and as necessary in the political world as storms in the physical."
 -- http://www.url.com
 
-Das ist ein schiefes "`Anführungszeichen`" und das ''auch'' ``d`` .
-Das ist eine Bemerkung.footnote:[Vgl. http://www.url.com]
+Das ist ein schiefes "`Anführungszeichen`" und das ein "gerades".
+
+=== Bilder
+Das ist ein image:1.png[Logo] inline Bild.
+
+image::1.png[Logo]
