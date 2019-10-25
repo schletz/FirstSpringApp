@@ -6,6 +6,7 @@ ifdef::env-github[]
 :important-caption: :heavy_exclamation_mark:
 :caution-caption: :fire:
 :warning-caption: :warning:
+:imagesdir: https://gist.githubusercontent.com/path/to/gist/revision/dir/with/all/images
 endif::[]
 
 == Vergleich Markdown - Asciidoc
@@ -20,9 +21,10 @@ TIP: Weitere Informationen auf https://gist.github.com/dcode/0cfbf2699a1fe9b46ff
 ----
         static void Main(string[] args)
         {
-           Console.WriteLine("Hello!");
+           Console.WriteLine("Hello!"); // <1>
         }
 ----
+<1> Gibt Hello aus.
 
 === Einbinden von externen Dateien mit einem Tag im Quellcode
 [source,c#,linenums,highlight=2..5,indent=0]
@@ -34,7 +36,6 @@ include::Program.cs[tags=mainMethod]
 and as necessary in the political world as storms in the physical."
 -- http://www.url.com
 
-Das ist ein "Anführungszeichen" und das ''auch''.
-
+Das ist ein schiefes "`Anführungszeichen`" und das ''auch'' ``d`` .
 Das ist eine Bemerkung.footnote:[Vgl. http://www.url.com]
 
