@@ -19,7 +19,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 /**
- * Testen mit Mockito
+ * Testen mit Mockito. Muss mit Test enden.
  */
 @ExtendWith({ MockitoExtension.class, })
 class StudentServiceTest {
