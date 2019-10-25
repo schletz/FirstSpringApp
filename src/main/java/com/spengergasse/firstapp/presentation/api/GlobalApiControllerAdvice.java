@@ -15,6 +15,8 @@ import lombok.Data;
  * Controllern überwacht werden. Wir benutzen das Überwachen von Exceptions, auf
  * die wir mit einer benutzerdefinierten Antwort reagieren.
  */
+// Berücksichtigt nur Controller, die im aktuellen Paket oder darunter liegen. ALso nicht die web
+// controller.
 @ControllerAdvice(basePackageClasses = { GlobalApiControllerAdvice.class })
 public class GlobalApiControllerAdvice {
     // Liefert im Falle einer auftretenden Exception eine in JSON serialisierte
